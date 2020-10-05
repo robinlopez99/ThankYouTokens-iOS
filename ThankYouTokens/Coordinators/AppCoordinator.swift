@@ -38,6 +38,8 @@ class AppCoordinator: Coordinator {
 
 extension AppCoordinator: LoginCoordinatorDelegate {
     func loginPressed() {
+        navigationController.popViewController(animated: false)
+        self.childCoordinators.removeLast()
         self.showMain()
     }
 }

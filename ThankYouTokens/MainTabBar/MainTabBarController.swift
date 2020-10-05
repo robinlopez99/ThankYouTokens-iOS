@@ -20,7 +20,7 @@ class MainTabBarController: UITabBarController {
     }
     
     private func configureTabBar() {
-        tabBar.barTintColor = UIColor.appColors.pastelOrange
+        tabBar.barTintColor = UIColor.appColors.black
         home.navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         profile.navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 2)
         account.navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 3)

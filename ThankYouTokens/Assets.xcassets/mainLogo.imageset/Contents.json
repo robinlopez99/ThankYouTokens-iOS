@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "tytlogo.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
