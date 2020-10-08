@@ -10,6 +10,8 @@ import XCTest
 
 class AppCoordinatorTests: XCTestCase {
     
+    //check delegates
+    
     let coord = AppCoordinator(navigationController: UINavigationController())
     
     //Navigation Bar should be hidden when app starts

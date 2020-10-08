@@ -14,6 +14,7 @@ class AccountCoordinator: Coordinator {
     
     init(navigationController:UINavigationController) {
         self.navigationController = navigationController
+        self.navigationController.isNavigationBarHidden = true
     }
     
     func start() {
