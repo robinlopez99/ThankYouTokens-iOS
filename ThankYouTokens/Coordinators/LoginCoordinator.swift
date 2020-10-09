@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginCoordinatorDelegate {
-    func loginPressed()
+    func loginPressed(username: String, password:String)
 }
 
 class LoginCoordinator: Coordinator {
@@ -30,7 +30,16 @@ class LoginCoordinator: Coordinator {
 }
 
 extension LoginCoordinator: LoginViewControllerDelegate {
-    func loginButtonPressed() {
-        delegate?.loginPressed()
+    func loginButtonPressed(username: String, password: String) {
+        delegate?.loginPressed(username: username, password: password)
+    }
+    
+    func createNewAccount() {
+        let alert = UIAlertController(title: "New Account Alert", message: "This is a placeholder for the create an account screen", preferredStyle: .alert)
+        navigationController.topViewController?.present(alert, animated: true, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            alert.dismiss(animated: true, completion: nil)
+        })
     }
 }
