@@ -59,18 +59,18 @@ class LoginViewController: UIViewController, Storyboarded {
     }
 
     @IBAction func loginPressed(_ sender: Any) {
-        if let user = usernameTextField.text, user != "",
-           let pass = passwordTextField.text, pass != "" {
-            self.delegate?.loginButtonPressed(username: user, password: pass)
-            return
-        }
-        
-        let alert = UIAlertController(title: AppStrings.loginStrings.errors.missingField, message: AppStrings.loginStrings.errors.addUserAndPass, preferredStyle: .alert)
-        self.navigationController?.topViewController?.present(alert, animated: true, completion: nil)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
-            alert.dismiss(animated: true, completion: nil)
-        })
+        self.delegate?.loginButtonPressed(username: usernameTextField.text ?? "", password: passwordTextField.text ?? "")
+//        if let user = usernameTextField.text, user != "",
+//           let pass = passwordTextField.text, pass != "" {
+//            return
+//        }
+//
+//        let alert = UIAlertController(title: AppStrings.loginStrings.errors.missingField, message: AppStrings.loginStrings.errors.addUserAndPass, preferredStyle: .alert)
+//        self.navigationController?.topViewController?.present(alert, animated: true, completion: nil)
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+//            alert.dismiss(animated: true, completion: nil)
+//        })
     }
     
     @IBAction func createAccountPressed(_ sender: Any) {

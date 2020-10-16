@@ -11,21 +11,67 @@ class AccountViewController: UIViewController, Storyboarded {
     
     weak var coordinator: AccountCoordinator?
 
+    @IBOutlet weak var topLabel: UILabel!
+    
+    //Balance Container
+    @IBOutlet weak var balanceContainer: UIView!
+    @IBOutlet weak var yourBalanceLabel: UILabel!
+    @IBOutlet weak var tokensLabel: UILabel!
+    
+    //Transactions Container
+    @IBOutlet weak var transactionsContainer: UIView!
+    @IBOutlet weak var recentTransLabel: UILabel!
+    @IBOutlet weak var moreTransButton: UIButton!
+    
+    
+    @IBOutlet weak var sendTokensButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.appColors.darkGray
+        
+        configureTopLabel()
+        configureBalance()
+        configureTransactions()
+        configureSendTokensButton()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configureTopLabel() {
+        topLabel.text = "Welcome Back Robin!"
+        topLabel.textColor = .white
+        topLabel.backgroundColor = .clear
+        topLabel.layer.masksToBounds = true
+        topLabel.layer.cornerRadius = 15
     }
-    */
+    
+    func configureBalance() {
+        balanceContainer.backgroundColor = UIColor.appColors.purple
+        balanceContainer.layer.cornerRadius = 15
+        yourBalanceLabel.backgroundColor = .clear
+        yourBalanceLabel.textColor = .white
+        tokensLabel.backgroundColor = .clear
+        tokensLabel.textColor = .white
+    }
+    
+    func configureTransactions() {
+        transactionsContainer.backgroundColor = UIColor.appColors.purple
+        transactionsContainer.layer.cornerRadius = 15
+        recentTransLabel.backgroundColor = .clear
+        recentTransLabel.textColor = .white
+        
+        moreTransButton.backgroundColor = UIColor.appColors.yellow
+        moreTransButton.setTitleColor(.black, for: .normal)
+        moreTransButton.layer.cornerRadius = 15
+        
+    }
+    
+    func configureSendTokensButton() {
+        sendTokensButton.backgroundColor = UIColor.appColors.yellow
+        sendTokensButton.setTitle("Send Tokens", for: .normal)
+        sendTokensButton.setTitleColor(.black, for: .normal)
+        sendTokensButton.layer.cornerRadius = 15
+    }
+    
 
 }

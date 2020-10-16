@@ -20,10 +20,11 @@ class MainTabBarController: UITabBarController {
     }
     
     private func configureTabBar() {
-        tabBar.barTintColor = UIColor.appColors.black
-        home.navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-        profile.navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 2)
-        account.navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 3)
+        tabBar.barTintColor = UIColor.appColors.darkGray
+        
+        home.navigationController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 1)
+        account.navigationController.tabBarItem = UITabBarItem(title: "Account", image: UIImage(named: "account"), tag: 2)
+        profile.navigationController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile"), tag: 3)
         
         viewControllers = [home.navigationController, account.navigationController, profile.navigationController]
     }

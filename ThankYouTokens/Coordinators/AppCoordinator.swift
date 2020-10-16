@@ -38,12 +38,15 @@ class AppCoordinator: Coordinator {
 
 extension AppCoordinator: LoginCoordinatorDelegate {
     func loginPressed(username: String, password: String) {
-        let dummyUser = "user"
-        let dummyPass = "pass"
-        if username == dummyUser && password == dummyPass {
-            navigationController.popViewController(animated: false)
-            self.childCoordinators.removeLast()
-            self.showMain()
-        }
+        navigationController.popViewController(animated: false)
+        self.childCoordinators.removeLast()
+        self.showMain()
+//        let dummyUser = "user"
+//        let dummyPass = "pass"
+//        if username == dummyUser && password == dummyPass {
+//            navigationController.popViewController(animated: false)
+//            self.childCoordinators.removeLast()
+//            self.showMain()
+//        }
     }
 }
