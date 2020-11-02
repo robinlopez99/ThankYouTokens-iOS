@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol AccountViewControllerDelegate {
+    func sendTokensPressed()
+}
+
 class AccountViewController: UIViewController, Storyboarded {
     
     weak var coordinator: AccountCoordinator?
+    var delegate: AccountViewControllerDelegate?
 
     @IBOutlet weak var topLabel: UILabel!
     
@@ -71,6 +76,11 @@ class AccountViewController: UIViewController, Storyboarded {
         sendTokensButton.setTitle("Send Tokens", for: .normal)
         sendTokensButton.setTitleColor(.black, for: .normal)
         sendTokensButton.layer.cornerRadius = 15
+    }
+    
+    
+    @IBAction func sendTokensPressed(_ sender: Any) {
+        delegate?.sendTokensPressed()
     }
     
 

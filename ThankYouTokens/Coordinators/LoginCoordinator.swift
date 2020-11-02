@@ -35,11 +35,15 @@ extension LoginCoordinator: LoginViewControllerDelegate {
     }
     
     func createNewAccount() {
-        let alert = UIAlertController(title: "New Account Alert", message: "This is a placeholder for the create an account screen", preferredStyle: .alert)
-        navigationController.topViewController?.present(alert, animated: true, completion: nil)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
-            alert.dismiss(animated: true, completion: nil)
-        })
+        let createAccountCoord = CreateAccountCoordinator(navigationController: navigationController)
+        self.childCoordinators.append(createAccountCoord)
+        createAccountCoord.delegate = self
+        createAccountCoord.start()
+    }
+}
+
+extension LoginCoordinator: CreateAccountCoordinatorDelegate {
+    func closePressed() {
+        self.dismiss(showNavBar: false)
     }
 }

@@ -22,6 +22,11 @@
 		2C31E616251982550068269B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C31E615251982550068269B /* HomeViewController.swift */; };
 		2C31E61C251982BF0068269B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C31E61B251982BF0068269B /* MainTabBarController.swift */; };
 		2C31E624251986280068269B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C31E623251986280068269B /* HomeCoordinator.swift */; };
+		2C4426E72550B5A300A002A1 /* AboutUsCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426E62550B5A300A002A1 /* AboutUsCoordinatorTests.swift */; };
+		2C4426EC2550B6A900A002A1 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426EB2550B6A900A002A1 /* CreateAccountViewController.swift */; };
+		2C4426F12550B6F800A002A1 /* CreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426F02550B6F800A002A1 /* CreateAccountCoordinator.swift */; };
+		2C4426F62550CA6C00A002A1 /* SendTokensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426F52550CA6C00A002A1 /* SendTokensViewController.swift */; };
+		2C4426FB2550CA8500A002A1 /* SendTokensCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426FA2550CA8500A002A1 /* SendTokensCoordinator.swift */; };
 		2C78BB11252E5B320039D942 /* LoginCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78BB10252E5B320039D942 /* LoginCoordinatorTests.swift */; };
 		2C78BB16252FD11D0039D942 /* HomeCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78BB15252FD11D0039D942 /* HomeCoordinatorTests.swift */; };
 		2C78BB1B252FD2A10039D942 /* ProfileCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78BB1A252FD2A10039D942 /* ProfileCoordinatorTests.swift */; };
@@ -74,6 +79,11 @@
 		2C31E615251982550068269B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2C31E61B251982BF0068269B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2C31E623251986280068269B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		2C4426E62550B5A300A002A1 /* AboutUsCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsCoordinatorTests.swift; sourceTree = "<group>"; };
+		2C4426EB2550B6A900A002A1 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		2C4426F02550B6F800A002A1 /* CreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinator.swift; sourceTree = "<group>"; };
+		2C4426F52550CA6C00A002A1 /* SendTokensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokensViewController.swift; sourceTree = "<group>"; };
+		2C4426FA2550CA8500A002A1 /* SendTokensCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokensCoordinator.swift; sourceTree = "<group>"; };
 		2C78BB10252E5B320039D942 /* LoginCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorTests.swift; sourceTree = "<group>"; };
 		2C78BB15252FD11D0039D942 /* HomeCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTests.swift; sourceTree = "<group>"; };
 		2C78BB1A252FD2A10039D942 /* ProfileCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -157,6 +167,8 @@
 				2C0BE2C72519945F00BE1CB0 /* ProfileViewController.swift */,
 				2C2FFCDC251D98BF008BE687 /* AccountViewController.swift */,
 				2C0D18242542378E00C3FA76 /* AboutUsViewController.swift */,
+				2C4426EB2550B6A900A002A1 /* CreateAccountViewController.swift */,
+				2C4426F52550CA6C00A002A1 /* SendTokensViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +192,8 @@
 				2C939D5D251AE5CE008B4932 /* AppCoordinator.swift */,
 				2C2FFCD7251D9895008BE687 /* AccountCoordinator.swift */,
 				2C0D1829254237C800C3FA76 /* AboutUsCoordinator.swift */,
+				2C4426F02550B6F800A002A1 /* CreateAccountCoordinator.swift */,
+				2C4426FA2550CA8500A002A1 /* SendTokensCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -243,6 +257,7 @@
 				2C78BB15252FD11D0039D942 /* HomeCoordinatorTests.swift */,
 				2C78BB1A252FD2A10039D942 /* ProfileCoordinatorTests.swift */,
 				2C78BB1F252FD3150039D942 /* AccountCoordinatorTests.swift */,
+				2C4426E62550B5A300A002A1 /* AboutUsCoordinatorTests.swift */,
 			);
 			path = ThankYouTokensTests;
 			sourceTree = "<group>";
@@ -386,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4426FB2550CA8500A002A1 /* SendTokensCoordinator.swift in Sources */,
 				2C31E60C2519737A0068269B /* LoginCoordinator.swift in Sources */,
 				2C31E5FD251972B00068269B /* LoginViewController.swift in Sources */,
 				2C0D182A254237C800C3FA76 /* AboutUsCoordinator.swift in Sources */,
@@ -400,6 +416,8 @@
 				2C31E616251982550068269B /* HomeViewController.swift in Sources */,
 				2C99A361251451E00054D743 /* AppDelegate.swift in Sources */,
 				2C9665BB253E79580067E069 /* ProfileRowTableViewCell.swift in Sources */,
+				2C4426F12550B6F800A002A1 /* CreateAccountCoordinator.swift in Sources */,
+				2C4426EC2550B6A900A002A1 /* CreateAccountViewController.swift in Sources */,
 				2C9665B3253E793F0067E069 /* HeaderTableViewCell.swift in Sources */,
 				2C0BE2C82519945F00BE1CB0 /* ProfileViewController.swift in Sources */,
 				2C31E606251972F40068269B /* LoginViewModel.swift in Sources */,
@@ -407,6 +425,7 @@
 				2C31E624251986280068269B /* HomeCoordinator.swift in Sources */,
 				2C99A363251451E00054D743 /* SceneDelegate.swift in Sources */,
 				2C31E6112519754B0068269B /* Storyboarded.swift in Sources */,
+				2C4426F62550CA6C00A002A1 /* SendTokensViewController.swift in Sources */,
 				2C2FFCD8251D9895008BE687 /* AccountCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CBD339A2521807400D4D77A /* AppCoordinatorTests.swift in Sources */,
+				2C4426E72550B5A300A002A1 /* AboutUsCoordinatorTests.swift in Sources */,
 				2C78BB16252FD11D0039D942 /* HomeCoordinatorTests.swift in Sources */,
 				2C78BB11252E5B320039D942 /* LoginCoordinatorTests.swift in Sources */,
 				2C78BB1B252FD2A10039D942 /* ProfileCoordinatorTests.swift in Sources */,

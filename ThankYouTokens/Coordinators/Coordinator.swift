@@ -13,3 +13,11 @@ protocol Coordinator: AnyObject {
     
     func start()
 }
+
+extension Coordinator {
+    func dismiss(showNavBar: Bool) {
+        navigationController.popViewController(animated: true)
+        self.childCoordinators.removeLast()
+        navigationController.isNavigationBarHidden = !showNavBar
+    }
+}
