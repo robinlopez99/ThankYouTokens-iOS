@@ -27,6 +27,8 @@
 		2C4426F12550B6F800A002A1 /* CreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426F02550B6F800A002A1 /* CreateAccountCoordinator.swift */; };
 		2C4426F62550CA6C00A002A1 /* SendTokensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426F52550CA6C00A002A1 /* SendTokensViewController.swift */; };
 		2C4426FB2550CA8500A002A1 /* SendTokensCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426FA2550CA8500A002A1 /* SendTokensCoordinator.swift */; };
+		2C4427002550D59800A002A1 /* CreateAccountCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426FF2550D59800A002A1 /* CreateAccountCoordinatorTests.swift */; };
+		2C4427052550D5F700A002A1 /* SendTokensCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4427042550D5F700A002A1 /* SendTokensCoordinatorTests.swift */; };
 		2C78BB11252E5B320039D942 /* LoginCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78BB10252E5B320039D942 /* LoginCoordinatorTests.swift */; };
 		2C78BB16252FD11D0039D942 /* HomeCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78BB15252FD11D0039D942 /* HomeCoordinatorTests.swift */; };
 		2C78BB1B252FD2A10039D942 /* ProfileCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78BB1A252FD2A10039D942 /* ProfileCoordinatorTests.swift */; };
@@ -84,6 +86,8 @@
 		2C4426F02550B6F800A002A1 /* CreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinator.swift; sourceTree = "<group>"; };
 		2C4426F52550CA6C00A002A1 /* SendTokensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokensViewController.swift; sourceTree = "<group>"; };
 		2C4426FA2550CA8500A002A1 /* SendTokensCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokensCoordinator.swift; sourceTree = "<group>"; };
+		2C4426FF2550D59800A002A1 /* CreateAccountCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinatorTests.swift; sourceTree = "<group>"; };
+		2C4427042550D5F700A002A1 /* SendTokensCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokensCoordinatorTests.swift; sourceTree = "<group>"; };
 		2C78BB10252E5B320039D942 /* LoginCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorTests.swift; sourceTree = "<group>"; };
 		2C78BB15252FD11D0039D942 /* HomeCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTests.swift; sourceTree = "<group>"; };
 		2C78BB1A252FD2A10039D942 /* ProfileCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -258,6 +262,8 @@
 				2C78BB1A252FD2A10039D942 /* ProfileCoordinatorTests.swift */,
 				2C78BB1F252FD3150039D942 /* AccountCoordinatorTests.swift */,
 				2C4426E62550B5A300A002A1 /* AboutUsCoordinatorTests.swift */,
+				2C4426FF2550D59800A002A1 /* CreateAccountCoordinatorTests.swift */,
+				2C4427042550D5F700A002A1 /* SendTokensCoordinatorTests.swift */,
 			);
 			path = ThankYouTokensTests;
 			sourceTree = "<group>";
@@ -437,9 +443,11 @@
 				2CBD339A2521807400D4D77A /* AppCoordinatorTests.swift in Sources */,
 				2C4426E72550B5A300A002A1 /* AboutUsCoordinatorTests.swift in Sources */,
 				2C78BB16252FD11D0039D942 /* HomeCoordinatorTests.swift in Sources */,
+				2C4427052550D5F700A002A1 /* SendTokensCoordinatorTests.swift in Sources */,
 				2C78BB11252E5B320039D942 /* LoginCoordinatorTests.swift in Sources */,
 				2C78BB1B252FD2A10039D942 /* ProfileCoordinatorTests.swift in Sources */,
 				2C78BB20252FD3150039D942 /* AccountCoordinatorTests.swift in Sources */,
+				2C4427002550D59800A002A1 /* CreateAccountCoordinatorTests.swift in Sources */,
 				2C99A378251451E20054D743 /* ThankYouTokensTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,6 +617,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XNDQCF9J27;
 				INFOPLIST_FILE = ThankYouTokens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -627,6 +636,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XNDQCF9J27;
 				INFOPLIST_FILE = ThankYouTokens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -644,7 +654,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XNDQCF9J27;
 				INFOPLIST_FILE = ThankYouTokensTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -665,7 +677,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XNDQCF9J27;
 				INFOPLIST_FILE = ThankYouTokensTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -686,6 +700,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XNDQCF9J27;
 				INFOPLIST_FILE = ThankYouTokensUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -705,6 +720,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XNDQCF9J27;
 				INFOPLIST_FILE = ThankYouTokensUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
