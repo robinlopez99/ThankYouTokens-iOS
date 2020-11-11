@@ -27,6 +27,10 @@
 		2C4426F12550B6F800A002A1 /* CreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426F02550B6F800A002A1 /* CreateAccountCoordinator.swift */; };
 		2C4426F62550CA6C00A002A1 /* SendTokensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426F52550CA6C00A002A1 /* SendTokensViewController.swift */; };
 		2C4426FB2550CA8500A002A1 /* SendTokensCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426FA2550CA8500A002A1 /* SendTokensCoordinator.swift */; };
+		2C4427002550D59800A002A1 /* CreateAccountCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4426FF2550D59800A002A1 /* CreateAccountCoordinatorTests.swift */; };
+		2C4427052550D5F700A002A1 /* SendTokensCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4427042550D5F700A002A1 /* SendTokensCoordinatorTests.swift */; };
+		2C6A6AE2255B7ED200ED6569 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C6A6AE1255B7ED200ED6569 /* GoogleService-Info.plist */; };
+		2C6A6AE3255B7ED200ED6569 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C6A6AE1255B7ED200ED6569 /* GoogleService-Info.plist */; };
 		2C78BB11252E5B320039D942 /* LoginCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78BB10252E5B320039D942 /* LoginCoordinatorTests.swift */; };
 		2C78BB16252FD11D0039D942 /* HomeCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78BB15252FD11D0039D942 /* HomeCoordinatorTests.swift */; };
 		2C78BB1B252FD2A10039D942 /* ProfileCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78BB1A252FD2A10039D942 /* ProfileCoordinatorTests.swift */; };
@@ -44,6 +48,9 @@
 		2C99A383251451E20054D743 /* ThankYouTokensUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99A382251451E20054D743 /* ThankYouTokensUITests.swift */; };
 		2CBD339A2521807400D4D77A /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD33992521807400D4D77A /* AppCoordinatorTests.swift */; };
 		2CF178CC252BC2C200D40D62 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF178CB252BC2C200D40D62 /* UIColor.swift */; };
+		47E13D952066FA1148B42AF0 /* Pods_ThankYouTokens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF6A13E46C2E527FCA50E67 /* Pods_ThankYouTokens.framework */; };
+		8242A72C3EF6B82AB7C3EC4B /* Pods_ThankYouTokensTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25532C905A5B0C97B99CB57 /* Pods_ThankYouTokensTests.framework */; };
+		92C945D0190A8EAC06A6F8B6 /* Pods_ThankYouTokens_ThankYouTokensUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A26086BD626B7C9E3C52274D /* Pods_ThankYouTokens_ThankYouTokensUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0653727FC0CA5818D65CF04C /* Pods-ThankYouTokens.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThankYouTokens.debug.xcconfig"; path = "Target Support Files/Pods-ThankYouTokens/Pods-ThankYouTokens.debug.xcconfig"; sourceTree = "<group>"; };
+		16478EE9AAF55547E5390418 /* Pods-ThankYouTokensTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThankYouTokensTests.release.xcconfig"; path = "Target Support Files/Pods-ThankYouTokensTests/Pods-ThankYouTokensTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C0BE2C72519945F00BE1CB0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2C0BE2CC2519948500BE1CB0 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		2C0D181F2542317800C3FA76 /* LogOutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutTableViewCell.swift; sourceTree = "<group>"; };
@@ -84,6 +93,9 @@
 		2C4426F02550B6F800A002A1 /* CreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinator.swift; sourceTree = "<group>"; };
 		2C4426F52550CA6C00A002A1 /* SendTokensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokensViewController.swift; sourceTree = "<group>"; };
 		2C4426FA2550CA8500A002A1 /* SendTokensCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokensCoordinator.swift; sourceTree = "<group>"; };
+		2C4426FF2550D59800A002A1 /* CreateAccountCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinatorTests.swift; sourceTree = "<group>"; };
+		2C4427042550D5F700A002A1 /* SendTokensCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokensCoordinatorTests.swift; sourceTree = "<group>"; };
+		2C6A6AE1255B7ED200ED6569 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C78BB10252E5B320039D942 /* LoginCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorTests.swift; sourceTree = "<group>"; };
 		2C78BB15252FD11D0039D942 /* HomeCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTests.swift; sourceTree = "<group>"; };
 		2C78BB1A252FD2A10039D942 /* ProfileCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -107,6 +119,13 @@
 		2C99A384251451E20054D743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CBD33992521807400D4D77A /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		2CF178CB252BC2C200D40D62 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		4C65B5F820BB2CEBB4FC28DB /* Pods-ThankYouTokens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThankYouTokens.release.xcconfig"; path = "Target Support Files/Pods-ThankYouTokens/Pods-ThankYouTokens.release.xcconfig"; sourceTree = "<group>"; };
+		A26086BD626B7C9E3C52274D /* Pods_ThankYouTokens_ThankYouTokensUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThankYouTokens_ThankYouTokensUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B23F99048396886FFB19118F /* Pods-ThankYouTokens-ThankYouTokensUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThankYouTokens-ThankYouTokensUITests.release.xcconfig"; path = "Target Support Files/Pods-ThankYouTokens-ThankYouTokensUITests/Pods-ThankYouTokens-ThankYouTokensUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B25532C905A5B0C97B99CB57 /* Pods_ThankYouTokensTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThankYouTokensTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B505A2875D6BA8BAC285DFEB /* Pods-ThankYouTokens-ThankYouTokensUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThankYouTokens-ThankYouTokensUITests.debug.xcconfig"; path = "Target Support Files/Pods-ThankYouTokens-ThankYouTokensUITests/Pods-ThankYouTokens-ThankYouTokensUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CCF6A13E46C2E527FCA50E67 /* Pods_ThankYouTokens.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThankYouTokens.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB5940146D7AFEFA86CA2EDA /* Pods-ThankYouTokensTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThankYouTokensTests.debug.xcconfig"; path = "Target Support Files/Pods-ThankYouTokensTests/Pods-ThankYouTokensTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E13D952066FA1148B42AF0 /* Pods_ThankYouTokens.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8242A72C3EF6B82AB7C3EC4B /* Pods_ThankYouTokensTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C945D0190A8EAC06A6F8B6 /* Pods_ThankYouTokens_ThankYouTokensUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +237,8 @@
 				2C99A376251451E20054D743 /* ThankYouTokensTests */,
 				2C99A381251451E20054D743 /* ThankYouTokensUITests */,
 				2C99A35E251451E00054D743 /* Products */,
+				98D130F8AF493BB525DF2752 /* Pods */,
+				3DEC803A2C04B19BF65B03B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,6 +267,7 @@
 				2C99A36B251451E20054D743 /* LaunchScreen.storyboard */,
 				2C99A36E251451E20054D743 /* Info.plist */,
 				2C78BB24252FDE2D0039D942 /* Strings.swift */,
+				2C6A6AE1255B7ED200ED6569 /* GoogleService-Info.plist */,
 			);
 			path = ThankYouTokens;
 			sourceTree = "<group>";
@@ -258,6 +283,8 @@
 				2C78BB1A252FD2A10039D942 /* ProfileCoordinatorTests.swift */,
 				2C78BB1F252FD3150039D942 /* AccountCoordinatorTests.swift */,
 				2C4426E62550B5A300A002A1 /* AboutUsCoordinatorTests.swift */,
+				2C4426FF2550D59800A002A1 /* CreateAccountCoordinatorTests.swift */,
+				2C4427042550D5F700A002A1 /* SendTokensCoordinatorTests.swift */,
 			);
 			path = ThankYouTokensTests;
 			sourceTree = "<group>";
@@ -271,6 +298,30 @@
 			path = ThankYouTokensUITests;
 			sourceTree = "<group>";
 		};
+		3DEC803A2C04B19BF65B03B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCF6A13E46C2E527FCA50E67 /* Pods_ThankYouTokens.framework */,
+				A26086BD626B7C9E3C52274D /* Pods_ThankYouTokens_ThankYouTokensUITests.framework */,
+				B25532C905A5B0C97B99CB57 /* Pods_ThankYouTokensTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98D130F8AF493BB525DF2752 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0653727FC0CA5818D65CF04C /* Pods-ThankYouTokens.debug.xcconfig */,
+				4C65B5F820BB2CEBB4FC28DB /* Pods-ThankYouTokens.release.xcconfig */,
+				B505A2875D6BA8BAC285DFEB /* Pods-ThankYouTokens-ThankYouTokensUITests.debug.xcconfig */,
+				B23F99048396886FFB19118F /* Pods-ThankYouTokens-ThankYouTokensUITests.release.xcconfig */,
+				FB5940146D7AFEFA86CA2EDA /* Pods-ThankYouTokensTests.debug.xcconfig */,
+				16478EE9AAF55547E5390418 /* Pods-ThankYouTokensTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,9 +329,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C99A387251451E20054D743 /* Build configuration list for PBXNativeTarget "ThankYouTokens" */;
 			buildPhases = (
+				AB410823765E778AF890B598 /* [CP] Check Pods Manifest.lock */,
 				2C99A359251451E00054D743 /* Sources */,
 				2C99A35A251451E00054D743 /* Frameworks */,
 				2C99A35B251451E00054D743 /* Resources */,
+				8753AC745AE52BD97DF587BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,6 +348,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C99A38A251451E20054D743 /* Build configuration list for PBXNativeTarget "ThankYouTokensTests" */;
 			buildPhases = (
+				750B04AFCDDCA1C71DDF8305 /* [CP] Check Pods Manifest.lock */,
 				2C99A36F251451E20054D743 /* Sources */,
 				2C99A370251451E20054D743 /* Frameworks */,
 				2C99A371251451E20054D743 /* Resources */,
@@ -313,9 +367,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C99A38D251451E20054D743 /* Build configuration list for PBXNativeTarget "ThankYouTokensUITests" */;
 			buildPhases = (
+				DE567F53FE0021F05DDCE79E /* [CP] Check Pods Manifest.lock */,
 				2C99A37A251451E20054D743 /* Sources */,
 				2C99A37B251451E20054D743 /* Frameworks */,
 				2C99A37C251451E20054D743 /* Resources */,
+				A9B1FE3A8329FF3959A41F6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -375,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C99A36D251451E20054D743 /* LaunchScreen.storyboard in Resources */,
+				2C6A6AE2255B7ED200ED6569 /* GoogleService-Info.plist in Resources */,
 				2C99A36A251451E20054D743 /* Assets.xcassets in Resources */,
 				2C99A368251451E00054D743 /* Main.storyboard in Resources */,
 			);
@@ -384,6 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6A6AE3255B7ED200ED6569 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +453,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		750B04AFCDDCA1C71DDF8305 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThankYouTokensTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8753AC745AE52BD97DF587BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThankYouTokens/Pods-ThankYouTokens-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThankYouTokens/Pods-ThankYouTokens-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThankYouTokens/Pods-ThankYouTokens-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9B1FE3A8329FF3959A41F6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThankYouTokens-ThankYouTokensUITests/Pods-ThankYouTokens-ThankYouTokensUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThankYouTokens-ThankYouTokensUITests/Pods-ThankYouTokens-ThankYouTokensUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThankYouTokens-ThankYouTokensUITests/Pods-ThankYouTokens-ThankYouTokensUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB410823765E778AF890B598 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThankYouTokens-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE567F53FE0021F05DDCE79E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThankYouTokens-ThankYouTokensUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C99A359251451E00054D743 /* Sources */ = {
@@ -437,9 +598,11 @@
 				2CBD339A2521807400D4D77A /* AppCoordinatorTests.swift in Sources */,
 				2C4426E72550B5A300A002A1 /* AboutUsCoordinatorTests.swift in Sources */,
 				2C78BB16252FD11D0039D942 /* HomeCoordinatorTests.swift in Sources */,
+				2C4427052550D5F700A002A1 /* SendTokensCoordinatorTests.swift in Sources */,
 				2C78BB11252E5B320039D942 /* LoginCoordinatorTests.swift in Sources */,
 				2C78BB1B252FD2A10039D942 /* ProfileCoordinatorTests.swift in Sources */,
 				2C78BB20252FD3150039D942 /* AccountCoordinatorTests.swift in Sources */,
+				2C4427002550D59800A002A1 /* CreateAccountCoordinatorTests.swift in Sources */,
 				2C99A378251451E20054D743 /* ThankYouTokensTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,10 +768,12 @@
 		};
 		2C99A388251451E20054D743 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0653727FC0CA5818D65CF04C /* Pods-ThankYouTokens.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XNDQCF9J27;
 				INFOPLIST_FILE = ThankYouTokens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -623,10 +788,12 @@
 		};
 		2C99A389251451E20054D743 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C65B5F820BB2CEBB4FC28DB /* Pods-ThankYouTokens.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XNDQCF9J27;
 				INFOPLIST_FILE = ThankYouTokens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -641,10 +808,13 @@
 		};
 		2C99A38B251451E20054D743 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB5940146D7AFEFA86CA2EDA /* Pods-ThankYouTokensTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XNDQCF9J27;
 				INFOPLIST_FILE = ThankYouTokensTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -662,10 +832,13 @@
 		};
 		2C99A38C251451E20054D743 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16478EE9AAF55547E5390418 /* Pods-ThankYouTokensTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XNDQCF9J27;
 				INFOPLIST_FILE = ThankYouTokensTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -683,9 +856,11 @@
 		};
 		2C99A38E251451E20054D743 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B505A2875D6BA8BAC285DFEB /* Pods-ThankYouTokens-ThankYouTokensUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XNDQCF9J27;
 				INFOPLIST_FILE = ThankYouTokensUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -702,9 +877,11 @@
 		};
 		2C99A38F251451E20054D743 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B23F99048396886FFB19118F /* Pods-ThankYouTokens-ThankYouTokensUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XNDQCF9J27;
 				INFOPLIST_FILE = ThankYouTokensUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

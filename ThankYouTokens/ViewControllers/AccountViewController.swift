@@ -43,8 +43,9 @@ class AccountViewController: UIViewController, Storyboarded {
     }
     
     func configureTopLabel() {
-        topLabel.text = "Welcome Back Robin!"
+        topLabel.text = "Account Details"
         topLabel.textColor = .white
+        topLabel.textAlignment = .left
         topLabel.backgroundColor = .clear
         topLabel.layer.masksToBounds = true
         topLabel.layer.cornerRadius = 15
