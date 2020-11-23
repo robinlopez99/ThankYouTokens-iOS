@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,6 +36,7 @@
 		2C78BB1B252FD2A10039D942 /* ProfileCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78BB1A252FD2A10039D942 /* ProfileCoordinatorTests.swift */; };
 		2C78BB20252FD3150039D942 /* AccountCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78BB1F252FD3150039D942 /* AccountCoordinatorTests.swift */; };
 		2C78BB25252FDE2D0039D942 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78BB24252FDE2D0039D942 /* Strings.swift */; };
+		2C89E4DC255BA910002AB2D5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C89E4DB255BA910002AB2D5 /* UserModel.swift */; };
 		2C939D5E251AE5CE008B4932 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C939D5D251AE5CE008B4932 /* AppCoordinator.swift */; };
 		2C9665B3253E793F0067E069 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9665B2253E793F0067E069 /* HeaderTableViewCell.swift */; };
 		2C9665BB253E79580067E069 /* ProfileRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9665BA253E79580067E069 /* ProfileRowTableViewCell.swift */; };
@@ -46,6 +47,7 @@
 		2C99A36D251451E20054D743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C99A36B251451E20054D743 /* LaunchScreen.storyboard */; };
 		2C99A378251451E20054D743 /* ThankYouTokensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99A377251451E20054D743 /* ThankYouTokensTests.swift */; };
 		2C99A383251451E20054D743 /* ThankYouTokensUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99A382251451E20054D743 /* ThankYouTokensUITests.swift */; };
+		2CA9DDFF2566110300A4E372 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9DDFE2566110300A4E372 /* FirestoreService.swift */; };
 		2CBD339A2521807400D4D77A /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD33992521807400D4D77A /* AppCoordinatorTests.swift */; };
 		2CF178CC252BC2C200D40D62 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF178CB252BC2C200D40D62 /* UIColor.swift */; };
 		47E13D952066FA1148B42AF0 /* Pods_ThankYouTokens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF6A13E46C2E527FCA50E67 /* Pods_ThankYouTokens.framework */; };
@@ -101,6 +103,7 @@
 		2C78BB1A252FD2A10039D942 /* ProfileCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorTests.swift; sourceTree = "<group>"; };
 		2C78BB1F252FD3150039D942 /* AccountCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorTests.swift; sourceTree = "<group>"; };
 		2C78BB24252FDE2D0039D942 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		2C89E4DB255BA910002AB2D5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2C939D5D251AE5CE008B4932 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		2C9665B2253E793F0067E069 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		2C9665BA253E79580067E069 /* ProfileRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRowTableViewCell.swift; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 		2C99A37E251451E20054D743 /* ThankYouTokensUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThankYouTokensUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C99A382251451E20054D743 /* ThankYouTokensUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouTokensUITests.swift; sourceTree = "<group>"; };
 		2C99A384251451E20054D743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA9DDFE2566110300A4E372 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		2CBD33992521807400D4D77A /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		2CF178CB252BC2C200D40D62 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4C65B5F820BB2CEBB4FC28DB /* Pods-ThankYouTokens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThankYouTokens.release.xcconfig"; path = "Target Support Files/Pods-ThankYouTokens/Pods-ThankYouTokens.release.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +224,14 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		2C3FCA3A256604D900DB6312 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C89E4DB255BA910002AB2D5 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2C9665B1253E791E0067E069 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +267,8 @@
 		2C99A35F251451E00054D743 /* ThankYouTokens */ = {
 			isa = PBXGroup;
 			children = (
+				2CA9DDFD256610DD00A4E372 /* Services */,
+				2C3FCA3A256604D900DB6312 /* Models */,
 				2C9665B1253E791E0067E069 /* TableViewCells */,
 				2C2FFCD1251D92CF008BE687 /* Extensions */,
 				2C0BE2C0251992B100BE1CB0 /* MainTabBar */,
@@ -298,6 +312,14 @@
 			path = ThankYouTokensUITests;
 			sourceTree = "<group>";
 		};
+		2CA9DDFD256610DD00A4E372 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2CA9DDFE2566110300A4E372 /* FirestoreService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		3DEC803A2C04B19BF65B03B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +340,6 @@
 				FB5940146D7AFEFA86CA2EDA /* Pods-ThankYouTokensTests.debug.xcconfig */,
 				16478EE9AAF55547E5390418 /* Pods-ThankYouTokensTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -565,6 +586,7 @@
 				2C4426FB2550CA8500A002A1 /* SendTokensCoordinator.swift in Sources */,
 				2C31E60C2519737A0068269B /* LoginCoordinator.swift in Sources */,
 				2C31E5FD251972B00068269B /* LoginViewController.swift in Sources */,
+				2C89E4DC255BA910002AB2D5 /* UserModel.swift in Sources */,
 				2C0D182A254237C800C3FA76 /* AboutUsCoordinator.swift in Sources */,
 				2C2FFCDD251D98BF008BE687 /* AccountViewController.swift in Sources */,
 				2C939D5E251AE5CE008B4932 /* AppCoordinator.swift in Sources */,
@@ -582,6 +604,7 @@
 				2C9665B3253E793F0067E069 /* HeaderTableViewCell.swift in Sources */,
 				2C0BE2C82519945F00BE1CB0 /* ProfileViewController.swift in Sources */,
 				2C31E606251972F40068269B /* LoginViewModel.swift in Sources */,
+				2CA9DDFF2566110300A4E372 /* FirestoreService.swift in Sources */,
 				2C78BB25252FDE2D0039D942 /* Strings.swift in Sources */,
 				2C31E624251986280068269B /* HomeCoordinator.swift in Sources */,
 				2C99A363251451E00054D743 /* SceneDelegate.swift in Sources */,

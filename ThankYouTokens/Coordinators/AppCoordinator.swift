@@ -6,16 +6,20 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 
 class AppCoordinator: Coordinator {
-    var childCoordinators: [Coordinator] = []
     
+    var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
+    
+    var user: UserModel
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.navigationController.setNavigationBarHidden(true, animated: true)
+        self.user = UserModel(isLoggedIn: false, userId: "")
     }
     
     func start() {
@@ -23,30 +27,23 @@ class AppCoordinator: Coordinator {
     }
     
     func showLogin() {
-        let loginCoordinator = LoginCoordinator(navigationController: self.navigationController)
+        let loginCoordinator = LoginCoordinator(navigationController: self.navigationController, user: self.user)
         self.childCoordinators.append(loginCoordinator)
         loginCoordinator.delegate = self
         loginCoordinator.start()
     }
     
-    func showMain() {
+    func showMain(user: UserModel) {
         let tabBar = MainTabBarController()
-        navigationController.pushViewController(tabBar, animated: false)
+        navigationController.pushViewController(tabBar, animated: true)
     }
     
 }
 
 extension AppCoordinator: LoginCoordinatorDelegate {
-    func loginPressed(username: String, password: String) {
-        navigationController.popViewController(animated: false)
-        self.childCoordinators.removeLast()
-        self.showMain()
-//        let dummyUser = "user"
-//        let dummyPass = "pass"
-//        if username == dummyUser && password == dummyPass {
-//            navigationController.popViewController(animated: false)
-//            self.childCoordinators.removeLast()
-//            self.showMain()
-//        }
+    func goToHome(user: UserModel) {
+        self.dismiss(showNavBar: false)
+        self.user = user
+        showMain(user: user)
     }
 }

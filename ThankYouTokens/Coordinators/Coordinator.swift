@@ -20,4 +20,13 @@ extension Coordinator {
         self.childCoordinators.removeLast()
         navigationController.isNavigationBarHidden = !showNavBar
     }
+    
+    func showAlertDialogue(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        self.navigationController.topViewController?.present(alert, animated: true, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            alert.dismiss(animated: true, completion: nil)
+        })
+    }
 }

@@ -13,7 +13,8 @@ enum AppStrings {
         
         enum errors {
             static let missingField = "Missing Field"
-            static let addUserAndPass = "Make sure there is a username and password"
+            static let wrongEmailPass = "Wrong Email/Password"
+            static let wrongEmailPassDescription = "Please verify that you have entered the correct email and password"
         }
     }
     
