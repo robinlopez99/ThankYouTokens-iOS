@@ -43,6 +43,8 @@ class LoginViewController: UIViewController, Storyboarded {
         
         usernameTextField.textColor = .black
         passwordTextField.textColor = .black
+        
+        passwordTextField.isSecureTextEntry = true
     }
     
     func configureSpacerView() {
@@ -59,6 +61,7 @@ class LoginViewController: UIViewController, Storyboarded {
     }
 
     @IBAction func loginPressed(_ sender: Any) {
+        print("here 1")
         self.delegate?.loginButtonPressed(username: usernameTextField.text ?? "", password: passwordTextField.text ?? "")
     }
     

@@ -9,8 +9,8 @@ import UIKit
 
 class AccountCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
-    
     var navigationController: UINavigationController
+    
     
     init(navigationController:UINavigationController) {
         self.navigationController = navigationController
@@ -18,8 +18,9 @@ class AccountCoordinator: Coordinator {
     }
     
     func start() {
+        let viewModel = AccountViewControllerViewModel(tokenBalance: 0)
         let vc = AccountViewController.instantiate()
-        vc.coordinator = self
+        vc.viewModel = viewModel
         vc.delegate = self
         navigationController.pushViewController(vc, animated: false)
     }

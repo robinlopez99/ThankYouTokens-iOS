@@ -9,19 +9,17 @@ import UIKit
 import FirebaseAuth
 
 protocol LoginCoordinatorDelegate {
-    func goToHome(user: UserModel)
+    func goToHomeAfterCreate(user: UserModel)
+    func loginAttempt(username: String, password: String)
 }
 
 class LoginCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     var delegate: LoginCoordinatorDelegate?
-    let firestore = FirestoreService()
-    var user: UserModel
     
-    init(navigationController: UINavigationController, user: UserModel) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.user = user
         self.navigationController.isNavigationBarHidden = true
     }
     
@@ -35,25 +33,12 @@ class LoginCoordinator: Coordinator {
 
 extension LoginCoordinator: LoginViewControllerDelegate {
     func loginButtonPressed(username: String, password: String) {
-        Auth.auth().signIn(withEmail: username, password: password) { [weak self] authResult, error in
-            if error != nil {
-                self?.showAlertDialogue(title: AppStrings.loginStrings.errors.wrongEmailPass,
-                                        message: AppStrings.loginStrings.errors.wrongEmailPass)
-            } else {
-                if let uid = authResult?.user.uid {
-                    self?.user.userId = uid
-                    self?.user.isLoggedIn = true
-                    self?.firestore.getData(userId: uid)
-                } else {
-                    self?.showAlertDialogue(title: "Error",
-                                            message: "There was an error retrieving your account. Please try again.")
-                }
-            }
-        }
+        print("here 2")
+        delegate?.loginAttempt(username: username, password: password)
     }
     
     func createNewAccount() {
-        let createAccountCoord = CreateAccountCoordinator(navigationController: self.navigationController, user: self.user)
+        let createAccountCoord = CreateAccountCoordinator(navigationController: self.navigationController)
         self.childCoordinators.append(createAccountCoord)
         createAccountCoord.delegate = self
         createAccountCoord.start()
@@ -63,7 +48,7 @@ extension LoginCoordinator: LoginViewControllerDelegate {
 extension LoginCoordinator: CreateAccountCoordinatorDelegate {
     func goToHome(user: UserModel) {
         self.dismiss(showNavBar: false)
-        delegate?.goToHome(user: user)
+        delegate?.goToHomeAfterCreate(user: user)
     }
     
     func closePressed() {

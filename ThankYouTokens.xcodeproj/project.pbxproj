@@ -49,6 +49,8 @@
 		2C99A383251451E20054D743 /* ThankYouTokensUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99A382251451E20054D743 /* ThankYouTokensUITests.swift */; };
 		2CA9DDFF2566110300A4E372 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9DDFE2566110300A4E372 /* FirestoreService.swift */; };
 		2CBD339A2521807400D4D77A /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD33992521807400D4D77A /* AppCoordinatorTests.swift */; };
+		2CC63F2F262D12930003390C /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC63F2E262D12930003390C /* TabBarCoordinator.swift */; };
+		2CE17F3426115A73002E7AA2 /* QRGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE17F3326115A73002E7AA2 /* QRGenerator.swift */; };
 		2CF178CC252BC2C200D40D62 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF178CB252BC2C200D40D62 /* UIColor.swift */; };
 		47E13D952066FA1148B42AF0 /* Pods_ThankYouTokens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF6A13E46C2E527FCA50E67 /* Pods_ThankYouTokens.framework */; };
 		8242A72C3EF6B82AB7C3EC4B /* Pods_ThankYouTokensTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25532C905A5B0C97B99CB57 /* Pods_ThankYouTokensTests.framework */; };
@@ -122,6 +124,8 @@
 		2C99A384251451E20054D743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA9DDFE2566110300A4E372 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		2CBD33992521807400D4D77A /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		2CC63F2E262D12930003390C /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		2CE17F3326115A73002E7AA2 /* QRGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerator.swift; sourceTree = "<group>"; };
 		2CF178CB252BC2C200D40D62 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4C65B5F820BB2CEBB4FC28DB /* Pods-ThankYouTokens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThankYouTokens.release.xcconfig"; path = "Target Support Files/Pods-ThankYouTokens/Pods-ThankYouTokens.release.xcconfig"; sourceTree = "<group>"; };
 		A26086BD626B7C9E3C52274D /* Pods_ThankYouTokens_ThankYouTokensUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThankYouTokens_ThankYouTokensUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +224,7 @@
 				2C0D1829254237C800C3FA76 /* AboutUsCoordinator.swift */,
 				2C4426F02550B6F800A002A1 /* CreateAccountCoordinator.swift */,
 				2C4426FA2550CA8500A002A1 /* SendTokensCoordinator.swift */,
+				2CC63F2E262D12930003390C /* TabBarCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 		2C99A35F251451E00054D743 /* ThankYouTokens */ = {
 			isa = PBXGroup;
 			children = (
+				2CE17F3226115A61002E7AA2 /* Utilities */,
 				2CA9DDFD256610DD00A4E372 /* Services */,
 				2C3FCA3A256604D900DB6312 /* Models */,
 				2C9665B1253E791E0067E069 /* TableViewCells */,
@@ -318,6 +324,14 @@
 				2CA9DDFE2566110300A4E372 /* FirestoreService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		2CE17F3226115A61002E7AA2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2CE17F3326115A73002E7AA2 /* QRGenerator.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		3DEC803A2C04B19BF65B03B8 /* Frameworks */ = {
@@ -584,12 +598,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4426FB2550CA8500A002A1 /* SendTokensCoordinator.swift in Sources */,
+				2CE17F3426115A73002E7AA2 /* QRGenerator.swift in Sources */,
 				2C31E60C2519737A0068269B /* LoginCoordinator.swift in Sources */,
 				2C31E5FD251972B00068269B /* LoginViewController.swift in Sources */,
 				2C89E4DC255BA910002AB2D5 /* UserModel.swift in Sources */,
 				2C0D182A254237C800C3FA76 /* AboutUsCoordinator.swift in Sources */,
 				2C2FFCDD251D98BF008BE687 /* AccountViewController.swift in Sources */,
 				2C939D5E251AE5CE008B4932 /* AppCoordinator.swift in Sources */,
+				2CC63F2F262D12930003390C /* TabBarCoordinator.swift in Sources */,
 				2C0D18252542378E00C3FA76 /* AboutUsViewController.swift in Sources */,
 				2C31E61C251982BF0068269B /* MainTabBarController.swift in Sources */,
 				2C0D18202542317800C3FA76 /* LogOutTableViewCell.swift in Sources */,

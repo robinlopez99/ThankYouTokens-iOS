@@ -7,14 +7,18 @@
 
 import UIKit
 
+struct AccountViewControllerViewModel {
+    var tokenBalance: Int
+}
+
 protocol AccountViewControllerDelegate {
     func sendTokensPressed()
 }
 
 class AccountViewController: UIViewController, Storyboarded {
     
-    weak var coordinator: AccountCoordinator?
     var delegate: AccountViewControllerDelegate?
+    var viewModel: AccountViewControllerViewModel?
 
     @IBOutlet weak var topLabel: UILabel!
     
@@ -42,7 +46,7 @@ class AccountViewController: UIViewController, Storyboarded {
         configureSendTokensButton()
     }
     
-    func configureTopLabel() {
+    private func configureTopLabel() {
         topLabel.text = "Account Details"
         topLabel.textColor = .white
         topLabel.textAlignment = .left
@@ -51,16 +55,20 @@ class AccountViewController: UIViewController, Storyboarded {
         topLabel.layer.cornerRadius = 15
     }
     
-    func configureBalance() {
+    private func configureBalance() {
         balanceContainer.backgroundColor = UIColor.appColors.purple
         balanceContainer.layer.cornerRadius = 15
         yourBalanceLabel.backgroundColor = .clear
         yourBalanceLabel.textColor = .white
         tokensLabel.backgroundColor = .clear
         tokensLabel.textColor = .white
+        
+        if let balance = viewModel?.tokenBalance {
+            tokensLabel.text = "\(balance) Tokens"
+        }
     }
     
-    func configureTransactions() {
+    private func configureTransactions() {
         transactionsContainer.backgroundColor = UIColor.appColors.purple
         transactionsContainer.layer.cornerRadius = 15
         recentTransLabel.backgroundColor = .clear
@@ -72,7 +80,7 @@ class AccountViewController: UIViewController, Storyboarded {
         
     }
     
-    func configureSendTokensButton() {
+    private func configureSendTokensButton() {
         sendTokensButton.backgroundColor = UIColor.appColors.yellow
         sendTokensButton.setTitle("Send Tokens", for: .normal)
         sendTokensButton.setTitleColor(.black, for: .normal)

@@ -17,13 +17,10 @@ class CreateAccountCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     var delegate: CreateAccountCoordinatorDelegate?
-    var user: UserModel
-    
     let firestore = FirestoreService()
     
-    init(navigationController: UINavigationController, user: UserModel) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.user = user
     }
     
     func start() {
@@ -41,16 +38,15 @@ extension CreateAccountCoordinator: CreateAccountViewControllerDelegate {
                 self.showAlertDialogue(title: "Error", message: "There was an error creating your account. Please retry")
             } else {
                 if let userId = authResult?.user.uid {
-                    self.user.userId = userId
-                    self.user.first_name = firstName
-                    self.user.last_name = lastName
-                    self.user.isLoggedIn = true
-                    let postUserDataError = self.firestore.postData(userId: self.user.userId, firstName: firstName, lastName: lastName, tokens: 500.00, floating_tokens: 0.00)
+                    var user = UserModel(isLoggedIn: true, userId: userId, email: email)
+                    user.first_name = firstName
+                    user.last_name = lastName
+                    let postUserDataError = self.firestore.postData(userId: user.userId, firstName: firstName, lastName: lastName, tokens: 500, email: email)
                     if postUserDataError == true {
                         Auth.auth().currentUser?.delete()
                         self.showAlertDialogue(title: "Error", message: "There was an error creating your account. Please retry")
                     }
-                    self.delegate?.goToHome(user: self.user)
+                    self.delegate?.goToHome(user: user)
                 }
             }
         }

@@ -14,6 +14,8 @@ protocol SendTokensCoordinatorDelegate {
 class SendTokensCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
+    let firestore = FirestoreService()
+    var viewcontroller: SendTokensViewController?
     
     var delegate: SendTokensCoordinatorDelegate?
     
@@ -22,14 +24,27 @@ class SendTokensCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = SendTokensViewController.instantiate()
-        vc.coordinator = self
-        vc.delegate = self
-        navigationController.pushViewController(vc, animated: true)
+        viewcontroller = SendTokensViewController.instantiate()
+        if let vc = viewcontroller {
+            vc.coordinator = self
+            vc.delegate = self
+            navigationController.pushViewController(vc, animated: true)
+        }
     }
 }
 
 extension SendTokensCoordinator: SendTokensViewControllerDelegate {
+    func tokensSent(amount: Int) {
+        let post = firestore.postTransaction(userId: "cRAu3MBPD1ggcIkkDhGZBKIZx0J3", amount: amount)
+        
+        if !post {
+            guard let qr = generateQRCode(from: "this is a test") else {
+                return
+            }
+            viewcontroller?.configureQr(qrCode: qr)
+        }
+    }
+    
     func closePressed() {
         delegate?.closePressed()
     }

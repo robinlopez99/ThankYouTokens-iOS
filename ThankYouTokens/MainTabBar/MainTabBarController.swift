@@ -7,16 +7,26 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController, Storyboarded {
     
-    let home = HomeCoordinator(navigationController: UINavigationController())
-    let profile = ProfileCoordinator(navigationController: UINavigationController())
-    let account = AccountCoordinator(navigationController: UINavigationController())
-    let aboutUs = AboutUsCoordinator(navigationController: UINavigationController())
-
+    var user: UserModel
+    var home: HomeCoordinator = HomeCoordinator(navigationController: UINavigationController())
+    var profile: ProfileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
+    var account: AccountCoordinator = AccountCoordinator(navigationController: UINavigationController())
+    var aboutUs: AboutUsCoordinator = AboutUsCoordinator(navigationController: UINavigationController())
+    
+    init(user: UserModel) {
+        self.user = user
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        startCoordinators()
+        initCoordinators()
         configureTabBar()
     }
     
@@ -31,7 +41,7 @@ class MainTabBarController: UITabBarController {
         viewControllers = [home.navigationController, account.navigationController, profile.navigationController, aboutUs.navigationController]
     }
     
-    private func startCoordinators() {
+    private func initCoordinators() {
         home.start()
         profile.start()
         account.start()
