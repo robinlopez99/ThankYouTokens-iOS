@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct LogOutTableViewCellViewModel {
+struct LogOutTableViewCellViewModel: CellViewModel {
     let title: String
     let titleColor: UIColor
     let buttonColor: UIColor

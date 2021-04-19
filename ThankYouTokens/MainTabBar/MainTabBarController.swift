@@ -11,12 +11,14 @@ class MainTabBarController: UITabBarController, Storyboarded {
     
     var user: UserModel
     var home: HomeCoordinator = HomeCoordinator(navigationController: UINavigationController())
-    var profile: ProfileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
-    var account: AccountCoordinator = AccountCoordinator(navigationController: UINavigationController())
+    var profile: ProfileCoordinator
+    var account: AccountCoordinator
     var aboutUs: AboutUsCoordinator = AboutUsCoordinator(navigationController: UINavigationController())
     
     init(user: UserModel) {
         self.user = user
+        self.account = AccountCoordinator(navigationController: UINavigationController(), user: user)
+        self.profile = ProfileCoordinator(navigationController: UINavigationController(), user: user)
         super.init(nibName: nil, bundle: nil)
     }
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct ProfileRowTableViewCellViewModel {
+struct ProfileRowTableViewCellViewModel: CellViewModel {
     let rowDescription: String
     let rowValue: String
     let textColor: UIColor

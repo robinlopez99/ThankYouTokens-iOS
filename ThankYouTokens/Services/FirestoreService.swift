@@ -34,7 +34,7 @@ public struct FirestoreService {
     }
     
     // This function will post to Firestore and return true if no isses
-    func postData(userId: String, firstName: String, lastName: String, tokens: Int, email: String) -> Bool {
+    func postNewData(userId: String, firstName: String, lastName: String, tokens: Int, email: String) -> Bool {
         var errorEncountered: Bool = false
         
         db.collection("users").document(userId).setData([
@@ -48,26 +48,37 @@ public struct FirestoreService {
             }
         }
         
-        return errorEncountered
-    }
-    
-
-    func postTransaction(userId: String, amount: Int) -> Bool {
-        var errorEncountered = false
-        let today = Date()
-        let expTime = Calendar.current.date(byAdding: .day, value: 1, to: today)!
+        if errorEncountered == true {
+            return errorEncountered
+        }
         
         db.collection("float-accounts").document(userId).setData([
-            "amount" : amount,
-            "expiry-data-time" : expTime,
-            "spent" : false,
-            "transaction" : 55
+            "transactions" : []
         ]) { (error) in
             if let _ = error {
                 errorEncountered = true
             }
         }
+        
         return errorEncountered
+    }
+    
+
+    func postTransaction(userId: String, amount: Int) -> Date {
+        let today = Date()
+        let expTime = Calendar.current.date(byAdding: .day, value: 1, to: today)!
+        
+        db.collection("float-accounts").document(userId).updateData([
+            "transactions" : FieldValue.arrayUnion([["amount" : amount,
+                                                    "expiry-data-time" : expTime,
+                                                    "spent" : false]])
+        ]) { (error) in
+            if let _ = error {
+                return
+            }
+        }
+        
+        return expTime
     }
     
 }

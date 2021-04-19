@@ -7,22 +7,41 @@
 
 import UIKit
 
+struct ProfileViewControllerViewModel {
+    var email: String
+    var first_name: String
+    var last_name: String
+}
+
 class ProfileViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var tableView: UITableView!
+    var viewModel: ProfileViewControllerViewModel?
+    var dataSource: [CellViewModel] = []
     
     weak var coordinator: ProfileCoordinator?
-    var dataSource: [Any] = [
-        HeaderTableViewCellViewModel(title: "Profile", titleColor: .white),
-        ProfileRowTableViewCellViewModel(rowDescription: "Name", rowValue: "Robin Lopez", textColor: .white),
-        ProfileRowTableViewCellViewModel(rowDescription: "Email", rowValue: "robin.lopez@uconn.edu", textColor: .white),
-        LogOutTableViewCellViewModel(title: "Logout", titleColor: .white, buttonColor: UIColor.appColors.orange)
-    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.appColors.darkGray
+        setupDataSource()
         configureTableView()
+    }
+    
+    func setupDataSource() {
+        dataSource = [
+            HeaderTableViewCellViewModel(title: "Profile",
+                                         titleColor: .white),
+            ProfileRowTableViewCellViewModel(rowDescription: "Name",
+                                             rowValue: "\(viewModel?.first_name ?? "") \(viewModel?.last_name ?? "")",
+                                             textColor: .white),
+            ProfileRowTableViewCellViewModel(rowDescription: "Email",
+                                             rowValue: "\(viewModel?.email ?? "")",
+                                             textColor: .white),
+            LogOutTableViewCellViewModel(title: "Logout",
+                                         titleColor: .white,
+                                         buttonColor: UIColor.appColors.orange)
+        ]
     }
     
     private func configureTableView() {

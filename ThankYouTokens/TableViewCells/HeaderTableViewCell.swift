@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct HeaderTableViewCellViewModel {
+struct HeaderTableViewCellViewModel: CellViewModel {
     let title: String
     let titleColor: UIColor
     

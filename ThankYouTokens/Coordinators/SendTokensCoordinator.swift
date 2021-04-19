@@ -16,11 +16,13 @@ class SendTokensCoordinator: Coordinator {
     var navigationController: UINavigationController
     let firestore = FirestoreService()
     var viewcontroller: SendTokensViewController?
+    var user: UserModel
     
     var delegate: SendTokensCoordinatorDelegate?
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, user: UserModel) {
         self.navigationController = navigationController
+        self.user = user
     }
     
     func start() {
@@ -35,12 +37,9 @@ class SendTokensCoordinator: Coordinator {
 
 extension SendTokensCoordinator: SendTokensViewControllerDelegate {
     func tokensSent(amount: Int) {
-        let post = firestore.postTransaction(userId: "cRAu3MBPD1ggcIkkDhGZBKIZx0J3", amount: amount)
-        
-        if !post {
-            guard let qr = generateQRCode(from: "this is a test") else {
-                return
-            }
+        let post = firestore.postTransaction(userId: "\(user.userId)", amount: amount)
+        let qr = generateQRCode(from: "[\(user.userId),\(post)]")
+        if let qr = qr {
             viewcontroller?.configureQr(qrCode: qr)
         }
     }

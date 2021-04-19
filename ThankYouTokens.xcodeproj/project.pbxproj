@@ -50,6 +50,7 @@
 		2CA9DDFF2566110300A4E372 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9DDFE2566110300A4E372 /* FirestoreService.swift */; };
 		2CBD339A2521807400D4D77A /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD33992521807400D4D77A /* AppCoordinatorTests.swift */; };
 		2CC63F2F262D12930003390C /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC63F2E262D12930003390C /* TabBarCoordinator.swift */; };
+		2CC63F34262D285A0003390C /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC63F33262D285A0003390C /* TableViewCellViewModel.swift */; };
 		2CE17F3426115A73002E7AA2 /* QRGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE17F3326115A73002E7AA2 /* QRGenerator.swift */; };
 		2CF178CC252BC2C200D40D62 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF178CB252BC2C200D40D62 /* UIColor.swift */; };
 		47E13D952066FA1148B42AF0 /* Pods_ThankYouTokens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF6A13E46C2E527FCA50E67 /* Pods_ThankYouTokens.framework */; };
@@ -125,6 +126,7 @@
 		2CA9DDFE2566110300A4E372 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		2CBD33992521807400D4D77A /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		2CC63F2E262D12930003390C /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		2CC63F33262D285A0003390C /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 		2CE17F3326115A73002E7AA2 /* QRGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerator.swift; sourceTree = "<group>"; };
 		2CF178CB252BC2C200D40D62 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4C65B5F820BB2CEBB4FC28DB /* Pods-ThankYouTokens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThankYouTokens.release.xcconfig"; path = "Target Support Files/Pods-ThankYouTokens/Pods-ThankYouTokens.release.xcconfig"; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				2C9665B2253E793F0067E069 /* HeaderTableViewCell.swift */,
 				2C9665BA253E79580067E069 /* ProfileRowTableViewCell.swift */,
 				2C0D181F2542317800C3FA76 /* LogOutTableViewCell.swift */,
+				2CC63F33262D285A0003390C /* TableViewCellViewModel.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				2C0D182A254237C800C3FA76 /* AboutUsCoordinator.swift in Sources */,
 				2C2FFCDD251D98BF008BE687 /* AccountViewController.swift in Sources */,
 				2C939D5E251AE5CE008B4932 /* AppCoordinator.swift in Sources */,
+				2CC63F34262D285A0003390C /* TableViewCellViewModel.swift in Sources */,
 				2CC63F2F262D12930003390C /* TabBarCoordinator.swift in Sources */,
 				2C0D18252542378E00C3FA76 /* AboutUsViewController.swift in Sources */,
 				2C31E61C251982BF0068269B /* MainTabBarController.swift in Sources */,

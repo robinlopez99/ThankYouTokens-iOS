@@ -41,7 +41,7 @@ extension CreateAccountCoordinator: CreateAccountViewControllerDelegate {
                     var user = UserModel(isLoggedIn: true, userId: userId, email: email)
                     user.first_name = firstName
                     user.last_name = lastName
-                    let postUserDataError = self.firestore.postData(userId: user.userId, firstName: firstName, lastName: lastName, tokens: 500, email: email)
+                    let postUserDataError = self.firestore.postNewData(userId: user.userId, firstName: firstName, lastName: lastName, tokens: 500, email: email)
                     if postUserDataError == true {
                         Auth.auth().currentUser?.delete()
                         self.showAlertDialogue(title: "Error", message: "There was an error creating your account. Please retry")
