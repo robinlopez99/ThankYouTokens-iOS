@@ -34,6 +34,7 @@ class AccountViewController: UIViewController, Storyboarded {
     
     
     @IBOutlet weak var sendTokensButton: UIButton!
+    @IBOutlet weak var receiveTokensButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -43,7 +44,7 @@ class AccountViewController: UIViewController, Storyboarded {
         configureTopLabel()
         configureBalance()
         configureTransactions()
-        configureSendTokensButton()
+        configureTokensButtons()
     }
     
     private func configureTopLabel() {
@@ -80,11 +81,16 @@ class AccountViewController: UIViewController, Storyboarded {
         
     }
     
-    private func configureSendTokensButton() {
+    private func configureTokensButtons() {
         sendTokensButton.backgroundColor = UIColor.appColors.yellow
         sendTokensButton.setTitle("Send Tokens", for: .normal)
         sendTokensButton.setTitleColor(.black, for: .normal)
         sendTokensButton.layer.cornerRadius = 15
+        
+        receiveTokensButton.backgroundColor = UIColor.appColors.yellow
+        receiveTokensButton.setTitle("Receive Tokens", for: .normal)
+        receiveTokensButton.setTitleColor(.black, for: .normal)
+        receiveTokensButton.layer.cornerRadius = 15
     }
     
     
@@ -92,5 +98,7 @@ class AccountViewController: UIViewController, Storyboarded {
         delegate?.sendTokensPressed()
     }
     
-
+    @IBAction func receiveTokensPressed(_ sender: Any) {
+        
+    }
 }

@@ -38,7 +38,6 @@ class AppCoordinator: Coordinator {
     }
     
     func fetch(userId: String) {
-
         firestore.getUserData(userId: userId, completion: { user in
             self.showMain(user: user)
         })

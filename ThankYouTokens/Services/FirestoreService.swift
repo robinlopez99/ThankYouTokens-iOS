@@ -13,7 +13,7 @@ public struct FirestoreService {
     let db = Firestore.firestore()
     
     func getUserData(userId: String, completion: @escaping (UserModel) -> Void) {
-        var curr_user: UserModel = UserModel(isLoggedIn: false, userId: "", email: "")
+        var curr_user: UserModel = UserModel(isLoggedIn: false, userId: userId, email: "")
         let doc = db.collection("users").document(userId)
         
         doc.getDocument { (document, error) in

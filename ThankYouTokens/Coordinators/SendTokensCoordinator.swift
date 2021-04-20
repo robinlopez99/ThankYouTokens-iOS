@@ -17,6 +17,8 @@ class SendTokensCoordinator: Coordinator {
     let firestore = FirestoreService()
     var viewcontroller: SendTokensViewController?
     var user: UserModel
+    let imageSaver = ImageSaver()
+    let qrGenerator = QRGenerator()
     
     var delegate: SendTokensCoordinatorDelegate?
     
@@ -38,9 +40,10 @@ class SendTokensCoordinator: Coordinator {
 extension SendTokensCoordinator: SendTokensViewControllerDelegate {
     func tokensSent(amount: Int) {
         let post = firestore.postTransaction(userId: "\(user.userId)", amount: amount)
-        let qr = generateQRCode(from: "[\(user.userId),\(post)]")
+        let qr = qrGenerator.generateQRCode(from: "[\(user.userId),\(post)]")
         if let qr = qr {
             viewcontroller?.configureQr(qrCode: qr)
+            imageSaver.writeToPhotoAlbum(image: qr)
         }
     }
     
