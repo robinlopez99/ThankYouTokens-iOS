@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AccountCoordinator: Coordinator {
+class AccountCoordinator: NSObject, Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     var user: UserModel
@@ -34,6 +34,19 @@ extension AccountCoordinator: AccountViewControllerDelegate {
         sendTokensCoord.delegate = self
         sendTokensCoord.start()
     }
+    
+    func receiveTokensPressed() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        navigationController.present(imagePicker, animated: true)
+    }
+}
+
+extension AccountCoordinator: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        navigationController.dismiss(animated: true)
+    }
+    
 }
 
 extension AccountCoordinator: SendTokensCoordinatorDelegate {

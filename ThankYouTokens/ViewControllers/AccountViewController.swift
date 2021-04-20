@@ -13,6 +13,7 @@ struct AccountViewControllerViewModel {
 
 protocol AccountViewControllerDelegate {
     func sendTokensPressed()
+    func receiveTokensPressed()
 }
 
 class AccountViewController: UIViewController, Storyboarded {
@@ -99,6 +100,6 @@ class AccountViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func receiveTokensPressed(_ sender: Any) {
-        
+        delegate?.receiveTokensPressed()
     }
 }
