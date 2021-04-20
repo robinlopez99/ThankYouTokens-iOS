@@ -11,6 +11,7 @@ class AccountCoordinator: NSObject, Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     var user: UserModel
+    let qrGenerator = QRGenerator()
     
     init(navigationController:UINavigationController, user: UserModel) {
         self.navigationController = navigationController
@@ -44,6 +45,13 @@ extension AccountCoordinator: AccountViewControllerDelegate {
 
 extension AccountCoordinator: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
+           let features = qrGenerator.detectQRCode(image),
+           !features.isEmpty {
+                for case let row as CIQRCodeFeature in features {
+                    print(row.messageString ?? "nope")
+                }
+            }
         navigationController.dismiss(animated: true)
     }
     
